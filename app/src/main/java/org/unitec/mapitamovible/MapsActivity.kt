@@ -108,7 +108,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleApiClient.Co
      //.fillColor(Color.BLUE));
 
             mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
-            mMap.moveCamera(CameraUpdateFactory.zoomTo(19f))
+            mMap.moveCamera(CameraUpdateFactory.zoomTo(19.5f))
         }
     }
 
@@ -146,6 +146,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleApiClient.Co
                         .checkLocationSettings(googleApiClient, builder.build())
                     result.setResultCallback { result ->
                         val status = result.status
+                        // Location settings are not satisfied.
+                        // But could be fixed by showing the user a dialog.
                         when (status.statusCode) {
                             LocationSettingsStatusCodes.SUCCESS -> {
                                 // All location settings are satisfied.
@@ -158,18 +160,14 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleApiClient.Co
                                         .getLastLocation(googleApiClient)
                                 }
                             }
-                            LocationSettingsStatusCodes.RESOLUTION_REQUIRED -> {
-                                // Location settings are not satisfied.
-                                // But could be fixed by showing the user a dialog.
-                                try {
-                                    // Show the dialog by calling startResolutionForResult(),
-                                    // and check the result in onActivityResult().
-                                    // Ask to turn on GPS automatically
-                                    status.startResolutionForResult(this@MapsActivity,
-                                        REQUEST_CHECK_SETTINGS_GPS)
-                                } catch (e: IntentSender.SendIntentException) {
-                                    // Ignore the error.
-                                }
+                            LocationSettingsStatusCodes.RESOLUTION_REQUIRED -> try {
+                                // Show the dialog by calling startResolutionForResult(),
+                                // and check the result in onActivityResult().
+                                // Ask to turn on GPS automatically
+                                status.startResolutionForResult(this@MapsActivity,
+                                    REQUEST_CHECK_SETTINGS_GPS)
+                            } catch (e: IntentSender.SendIntentException) {
+                                // Ignore the error.
                             }
 
                             LocationSettingsStatusCodes.SETTINGS_CHANGE_UNAVAILABLE -> {
