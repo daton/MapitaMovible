@@ -32,6 +32,7 @@ import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.Circle
 import com.google.android.gms.maps.model.CircleOptions
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
@@ -45,6 +46,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleApiClient.Co
 
     private var mylocation: Location? = null
     private var googleApiClient: GoogleApiClient? = null
+
+    var circulo:Circle?=null
 
 
 
@@ -74,9 +77,17 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleApiClient.Co
         mMap = googleMap
 
         // Add a marker in Sydney and move the camera
-        val sydney = LatLng(-34.0, 151.0)
+        val sydney = LatLng(19.0, 99.9)
+
       //  mMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
+        circulo=mMap.addCircle( CircleOptions()
+         .center(sydney)
+        .radius(4.0)
+        .strokeColor(Color.RED)
+            .strokeWidth(1.5f)
+        .fillColor(0x5500ff00))
+
     }
 
 
@@ -108,7 +119,10 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleApiClient.Co
      //.fillColor(Color.BLUE));
 
             mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
-            mMap.moveCamera(CameraUpdateFactory.zoomTo(19.5f))
+            mMap.moveCamera(CameraUpdateFactory.zoomTo(19.5f));
+
+            circulo!!.center=sydney
+
         }
     }
 
