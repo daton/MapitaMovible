@@ -147,10 +147,16 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleApiClient.Co
                     Manifest.permission.ACCESS_FINE_LOCATION)
                 if (permissionLocation == PackageManager.PERMISSION_GRANTED) {
                     mylocation = LocationServices.FusedLocationApi.getLastLocation(googleApiClient)
+
+
+
                     val locationRequest = LocationRequest()
+
                     locationRequest.interval = 3000
                     locationRequest.fastestInterval = 3000
                     locationRequest.priority = LocationRequest.PRIORITY_HIGH_ACCURACY
+
+
                     val builder = LocationSettingsRequest.Builder()
                         .addLocationRequest(locationRequest)
                     builder.setAlwaysShow(true)
