@@ -7,9 +7,9 @@
 
 2-.Dentro del Gradle Scripts, en la parte de build.gradle anexamos las siguientes dependencias en la parte correspondiente:
 
-![](.Tutorial_Geolocalizacion_images/cccd0cd2.png)
+![](.Tutorial_Geolocalizacion_images/3eb5110a.png)
 
-Debemos de verificar que la implementación play-services-maps y la play-services-location deben coincidir en la versión, es decir "16.1.0" 
+Debemos de verificar que la implementación play-services-maps y la play-services-location deben coincidir en la versión, es decir "16.0.0" 
 
 3-.Ahora en la carpeta "manifest" vamos a agregar las siguientes dependencias:
 
@@ -21,9 +21,21 @@ De las cuatro dependencias las mas importantes son : "android.permission.ACCESS_
 
 ![](.Tutorial_Geolocalizacion_images/874b8a9c.png)
 
+5-.Para que podamos hacer uso del Google maps, debemos autenticarnos con nuestra cuenta de gmail. Nos posicionamos en la carpeta "values", ingresamos al archivo google_maps_api.xml y copiamos la liga que nos aparece en esta clase para pegarla en un navegador.
 
+![](.Tutorial_Geolocalizacion_images/c1f3ffa9.png)
+
+![](.Tutorial_Geolocalizacion_images/0706fb10.png)
+
+6-.Una vez que pegamos esa liga en el navegador nos aparece la siguiente pantalla para registrar la aplicación para utilizar Maps SDK, aceptando las condiciones.
 
 ![](.Tutorial_Geolocalizacion_images/6e26b5f7.png)
 
+7-.Una vez que aceptemos las condiciones de uso, nos genera una Clave de API, la cual debemos copiar pues la pegaremos en la clase google_maps_api.xml
+
 ![](.Tutorial_Geolocalizacion_images/63bd6319.png)
+
+![](.Tutorial_Geolocalizacion_images/1c22f048.png)
+
+8-.
                                                                                        
