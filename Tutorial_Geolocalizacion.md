@@ -39,10 +39,19 @@ De las cuatro dependencias las mas importantes son : "android.permission.ACCESS_
 
 Es importante indicar que no debemos seleccionar la opción de "Restringir Clave" ya que ésto nos deshabilitará constantemente el uso de mapas.
 
-8-.Ingresamos a la clase "MapsActivity" el cual se generó cuando creamos "app/new/Google/Google Maps Activity". Esta clase es la más importante con la que se trabajará. Inicialmente se herada la clase AppCompatAActivity que de ahi se heredan todas las clases, además que implementamos 4 interfaces.
+8-.La clave que nos proporcionó la copiamos y la pegamos en "MapsActivity" en la parte que se indica subrayado en amarillo.
+
+![](.Tutorial_Geolocalizacion_images/206c5bf3.png)
+
+9-.Ingresamos a la clase "MapsActivity" el cual se generó cuando creamos "app/new/Google/Google Maps Activity". Esta clase es la más importante con la que se trabajará. Inicialmente se herada la clase AppCompatAActivity que de ahi se heredan todas las clases, además que implementamos 4 interfaces.
 
 ![](.Tutorial_Geolocalizacion_images/bac5347b.png)
 
 ![](.Tutorial_Geolocalizacion_images/e7a8805d.png)
+
+10
+
+
+
 
                                                                                       
