@@ -49,7 +49,11 @@ Es importante indicar que no debemos seleccionar la opción de "Restringir Clave
 
 ![](.Tutorial_Geolocalizacion_images/e7a8805d.png)
 
-10
+10-.La primer interfaz es "OnMapReadyCallback" la cual nos indica que una vez que se descargue el mapa podamos acceder al Googlemap que es el que se mostrará.
+
+![](.Tutorial_Geolocalizacion_images/ae041b1d.png)
+
+11-.La segunda interfaz es "GoogleApiClient.ConnectionCallbacks" indica que hay un cliente que hace la localización
 
 
 
