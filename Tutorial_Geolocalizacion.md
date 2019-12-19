@@ -177,6 +177,14 @@ Es importante indicar que no debemos seleccionar la opción de "Restringir Clave
 
 ![](.Tutorial_Geolocalizacion_images/6066bb23.png)
 
+41-.Para poder hacer que el mapa aparezca una vez que se ejecute la app, nos ubicamos en la parte de AndroidManifest.xml en donde en automático nos aparece los siguientes layouts que harán que una vez que se ejecute la aplicación nos enviará a una pantalla que dice "Hola Mundo".
+
+![](.Tutorial_Geolocalizacion_images/2fb05377.png)
+
+42-.Modificamos el primer activity modificando a .MainActivityy el segundo activity a quedar en .MapsActivity, quedando de la siguiente forma:
+
+![](.Tutorial_Geolocalizacion_images/a1bba71f.png)
+
 
 
 
