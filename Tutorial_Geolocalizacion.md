@@ -183,7 +183,9 @@ Es importante indicar que no debemos seleccionar la opción de "Restringir Clave
 
 42-.Modificamos el primer activity modificando a .MainActivityy el segundo activity a quedar en .MapsActivity, quedando de la siguiente forma:
 
-![](.Tutorial_Geolocalizacion_images/a1bba71f.png)
+![](.Tutorial_Geolocalizacion_images/aac833ef.png)
+
+
 
 
 
