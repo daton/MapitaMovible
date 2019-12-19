@@ -185,7 +185,7 @@ Es importante indicar que no debemos seleccionar la opción de "Restringir Clave
 
 ![](.Tutorial_Geolocalizacion_images/aac833ef.png)
 
-
+FIN DEL TUTORIAL
 
 
 
